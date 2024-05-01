@@ -35,6 +35,7 @@ A simple and versatile WordPress theme by DJABHipHop, founder of WP-Developer-Hu
 
 ### Project Rules
 
+- **Minum Support PHP:** Must PHP 7.x.
 - **JS Usage:** JS is only permitted to address bugs that cannot be fixed using CSS or PHP.
 - **PHP Framework:** The use of PHP frameworks is strictly prohibited in this project.
 - **CSS Framework:** Only Normalize/Reset CSS frameworks are allowed; other CSS frameworks are not permitted.
