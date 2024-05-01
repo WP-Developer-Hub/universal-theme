@@ -1,0 +1,260 @@
+/* CSS Document */
+/* Media Queries
+--------------------------------------------- */
+
+@media (max-width: 1050px) and (min-width: 380px) {
+    #wrapper {width: 100%; margin:0}
+
+    #header {padding-left: 0; padding-right: 0;}
+
+    #footer {padding-left: 20px; padding-right: 20px; width: 100%}
+
+    #site-branding {margin: 0 10px;}
+
+    #header #header-inner {flex-direction: column}
+
+    #site-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: solid 1px #666;
+        width: 100%;
+        background-color: #212121;
+        overflow-x: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Hide the navigation menu by default */
+    /* Also hide the */
+    #site-navigation ul {
+        display: none;
+        transition: all 200ms linear 0s;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Display Dropdown when clicked on Parent Label */
+    #site-navigation .menu a {
+        text-align: left;
+    }
+
+    #site-navigation .toggle {
+        display: flex;
+    }
+
+    /* Styling the toggle label */
+    #site-navigation #main-toggle {
+        display: flex;
+        min-height: 30px;
+        padding: 15px 5px;
+        color: #FFF;
+        transition: all 200ms linear 0s;
+    }
+    
+    #site-navigation .menu .drop-header  {
+        justify-content: flex-start;
+    }
+
+    #site-navigation .menu .drop-header .toggle {
+        font-size: 38px;
+    }
+
+    /* Display Dropdown when clicked on Parent Label */
+    #site-navigation [id^=drop]:checked + ul {
+        display: block;
+        width: 100%;
+        background-color: #212121;
+    }
+
+    /* Change menu item's width to 100% */
+    #site-navigation ul li {
+        display: block;
+        width: 100%;
+        background-color: #111;
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #site-navigation ul ul .toggle,
+    #site-navigation ul ul a {
+        transition: all 200ms linear 0s;
+    }
+    
+    #site-navigation ul li .toggle,
+    #site-navigation ul li:hover .toggle {
+        background-color: transparent !important;
+    }
+
+    #site-navigation ul li:hover,
+    #site-navigation ul ul ul li:hover {
+        border-bottom: solid 5px var(--universal-accent-color);
+    }
+
+    #site-navigation ul li ul li .toggle,
+    #site-navigation ul ul a,
+    #site-navigation ul ul ul a {
+        color: #FFF;
+        font-size: 1em;
+    }
+
+    #site-navigation ul li ul li .toggle,
+    #site-navigation ul ul li {
+        background-color: #212121;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Hide Dropdowns by Default */
+    #site-navigation ul ul {
+        display: none;
+        float: none;
+        position: static;
+        color: #ffffff;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Hide menus on hover */
+    #site-navigation ul ul li:hover > ul,
+    #site-navigation ul li:hover > ul {
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Fisrt Tier Dropdown */
+    #site-navigation ul ul li {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    #site-navigation ul ul ul li {
+        position: static;
+        background-color: #111;
+        padding: 0;
+        margin: 0;
+    }
+
+    #page-heading {border-left: none; border-right: none;}
+
+/*    #container, #post-list-content {grid-gap: 5px; margin: 5px 0}*/
+
+    .post-container {padding: 20px}
+
+    .page-heading {border-left: none; border-right: none;}
+
+    .pagination {margin-left: 8px; margin-right: 8px}
+}
+
+@media (max-width: 1200px) and (min-width: 381px) {
+    #post-list-content .post-container .post-content-wrapper {grid-template-columns: 200px 1fr;}
+    #post-list-content #posts .post-item-thumbnail, #post-list-content #posts .post-item-thumbnail .post-thumbnail-missing {max-width: 200px; height: 200px; font-size: 100px;}
+    #post-list-content #posts .post-item-thumbnail .posticons{ display: none;}
+}
+
+@media (max-width: 988px) and (min-width: 381px) {
+    #header #header-inner,
+    #footer #footer-inner {flex-direction: column}
+
+    #author-page-author-box {margin-bottom: 0px}
+
+    #container, #post-list-content, .post-container, .post-content-wrapper, #post-container, #related-posts {grid-template-columns: 100%}
+
+    #post-list-content .post-container .post-content-wrapper {grid-template-columns: 100px 1fr;}
+
+    #post-list-content #posts .post-item-thumbnail, #post-list-content #posts .post-item-thumbnail .post-thumbnail-missing {max-width: 100px; height: 100px}
+
+    .widget-area {
+        padding: 0px;
+        gap: 0px;
+    }
+
+    .widget-area .widget {
+        margin-bottom: 5px;
+        gap: 0px;
+    }
+
+    .author-box {
+        flex-direction: column;
+    }
+
+    .author-box .author-avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #posts,
+    #related-posts {
+        margin: 0px;
+    }
+
+    .post-item,
+    .author-box .author-info {
+        margin: 0px;
+    }
+
+    #related-posts .post-item {
+        width: 100%;
+    }
+
+    #related-posts .post-item-thumbnail .post-thumbnail-missing {
+        width: 100%;
+    }
+
+    .post-container {padding: 25px}
+
+    #footer #footer-inner {
+        padding: 0;
+    }
+
+    #footer #footer-inner .footer-widget {
+        border: none !important;
+        width: 100%;
+        margin: 0;
+        gap: 0;
+    }
+
+    #error-additional-message {font-size: 60px}
+}
+
+@media all and (max-width : 900px) {
+    #post-list-content .post-container .post-content-wrapper { grid-template-columns: 100px 1fr;}
+}
+
+@media all and (max-width : 596px) {
+    #error-message {font-size: 200px}
+
+    #error-additional-message {font-size: 50px}
+    
+    #site-branding a,
+    #site-branding h1,
+    #site-branding h2 {font-size: 45px}
+
+    #post-list-content, .post-content-wrapper  {
+        grid-template-columns: 100%;
+    }
+
+    #page-heading,
+    .post-item {border-left: none; border-right: none;}
+    .post-item {border-top: none}
+
+    #single-post-meta {
+        flex-direction: column;
+        flex: 100%;
+        gap: 20px;
+    }
+
+    #single-post-meta .meta-separator::after {
+        content: "" !important;
+        height: 1px !important;
+        margin: 5px 0 !important;
+        width: 100% !important;
+        background: #EEE !important;
+        display: none !important;
+    }
+}
+

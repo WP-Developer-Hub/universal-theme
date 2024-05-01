@@ -1,0 +1,120 @@
+
+# Universal Theme 1.0
+
+A simple and versatile WordPress theme by DJABHipHop, founder of WP-Developer-Hub.
+
+## Theme Features
+
+### Feature Status
+
+- Admin Bar: Supported
+- Automatic Feed Links: Supported
+- Custom Background: Supported
+- Custom Header: Supported
+- Custom Logo: Supported
+- HTML5 Support: Supported
+- Post Thumbnails: Supported
+- Title Tag: Supported
+- Widgets: Supported
+- Align Wide: Supported
+- Block Templates: Supported
+- Block Template Parts: Supported
+- Core Block Patterns: Supported
+- Disable Custom Colors: Supported
+- Disable Custom Font Sizes: Supported
+- Disable Custom Gradients: Supported
+- Disable Layout Styles: Supported
+- Editor Color Palette: Supported
+- Editor Gradient Presets: Supported
+- Editor Font Sizes: Supported
+- Editor Styles: Supported
+- Responsive Embeds: Supported
+- WP Block Styles: Supported
+
+## Theme Progress and Guidelines
+
+### Project Rules
+
+- **JS Usage:** JS is only permitted to address bugs that cannot be fixed using CSS or PHP.
+- **PHP Framework:** The use of PHP frameworks is strictly prohibited in this project.
+- **CSS Framework:** Only Normalize/Reset CSS frameworks are allowed; other CSS frameworks are not permitted.
+- **Usability:** Tasks marked as "Not Usable" indicate areas of the theme that are non-functional or incomplete.
+
+### Task Breakdown
+
+| Task Description                                                     | Completion (%) | Status                                      |
+| -------------------------------------------------------------------- | -------------- | ------------------------------------------- |
+| JS Code (Theme does not use JS Code for anything)                    | 0%             | Stress Me!!!!                               |
+| Accessibility Support                                                | 25%            | Stress Me!!!!                               |
+| CSS Order                                                            | 25%            | Stress Me!!!!                               |
+| Input Tag (type="range") Style                                       | 25%            | Stress Me!!!!                               |
+| Common Widget Styles                                                 | 33.3%          | Stress Me!!!!                               |
+| Secondary Widget Styles                                              | 33.3%          | Stress Me!!!!                               |
+| Footer Widget Styles                                                 | 33.3%          | Stress Me!!!!                               |
+| HTML Form Elements, Inputs:not(type["Submit, Reset, Button"]), Controls, Range Slider CSS | 50% | Only 50% Complete Stress Me How Much More Do I Have Left To Fix!!!! |
+| Post Single Styles                                                   | 65%            | Only 65% Complete Stress Me How Much More Do I Have Left To Fix!!!! |
+| Input Tag:not(type="checkbox, radio, range") Style                   | 75%            | Not That Bad, Has Minor Bugs, But Still Useable. |
+| Responsive Design Styles                                             | 75%            | Not That Bad, Has Minor Bugs, But Still Useable. |
+| Calendar Widget Style                                                | 80%            | Not That Bad, Has Minor Bugs, But Still Useable. |
+| Site Navigation Styles                                               | 95%            | Little To No Work Needed.                    |
+| Standard Image SEO Support                                           | 95%            | Little To No Work Needed.                    |
+| HTML CODE                                                            | 96%            | Little To No Work Needed.                    |
+| PHP CODE                                                             | 98%            | Little To No Work Needed.                    |
+| HTML Label Tag Styles                                                | 98%            | Little To No Work Needed.                    |
+| HTML Textarea Tag Styles                                             | 98%            | Little To No Work Needed.                    |
+| HTML Progress Tag Styles                                             | 99%            | Little To No Work Needed.                    |
+| Search Widget Style                                                  | 100%           | Perfect, A+                                 |
+| Tag Cloud Widget Style                                               | 100%           | Perfect, A+                                 |
+| Section & Widget Title Style                                         | 100%           | Perfect, A+                                 |
+| HTML Select Tag Styles For Single & Multi Mode                       | 100%           | Perfect, A+                                 |
+| HTML Button Tag Styles For type="(Submit, Reset, Button)"            | 100%           | Perfect, A+                                 |
+| HTML Inputs Tag Styles For type="(Submit, Reset, Button)"            | 100%           | Perfect, A+                                 |
+| Footer Copyright Styles                                              | 100%           | Perfect, A+                                 |
+| WordPress Alignments                                                 | 100%           | Perfect, A+                                 |
+| Footer Styles                                                        | 100%           | Perfect, A+                                 |
+| Header Styles                                                        | 100%           | Perfect, A+                                 |
+| Post Common Styles                                                   | 100%           | Perfect, A+                                 |
+| Post Styles                                                          | 100%           | Perfect, A+                                 |
+| Post Meta Common Styles                                              | 100%           | Perfect, A+                                 |
+| Post Single Tag Styles                                               | 100%           | Perfect, A+                                 |
+| Post Single Paging Styles                                            | 100%           | Perfect, A+                                 |
+| Author Box Styles                                                    | 100%           | Perfect, A+                                 |
+| Related Post Section Styles                                          | 100%           | Perfect, A+                                 |
+| Comment Section Styles                                               | 100%           | Perfect, A+                                 |
+| Common Pagination Styles                                             | 100%           | Perfect, A+                                 |
+| CSS 2024 Support                                                     | 100%           | Perfect, A+                                 |
+| HTML 2024 Support                                                    | 100%           | Perfect, A+                                 |
+
+## About
+
+### GPL License
+
+This theme is licensed under the GPL license. You can use it for anything as long as it remains GPL.
+
+### Credits
+
+Universal Theme was created by DJABHipHop as a simple and versatile WordPress theme for music and graphic design portfolios.
+
+Follow DJABHipHop on [Instagram](https://www.instagram.com/DJABHipHop/), [Facebook](https://www.facebook.com/DJABHipHop_1/), [YouTube](https://www.youtube.com/user/DJABHipHop), and [Twitter](https://twitter.com/DJABHipHop).
+
+### Liability
+
+DJABHipHop shall not be held liable for any damages arising from the use or inability to use this theme.
+
+---
+
+## Post Thumbnail Instructions
+
+### Guidelines for Theme Thumbnails
+
+- **Recommended Size:** 859px (width) x 550px (height)
+
+- **Aspect Ratio:** Approximately 1.56 (Width to Height)
+
+- **Cropping:** Maintain the aspect ratio to fit within the specified dimensions
+
+#### Additional Tips
+
+- **Quality Considerations:** Use high-resolution images for clarity and sharpness
+
+- **Mobile Optimization:** Test how the thumbnails appear on mobile devices for readability
