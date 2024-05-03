@@ -5,7 +5,7 @@
 @media (max-width: 1050px) and (min-width: 380px) {
     #wrapper {width: 100%; margin:0}
 
-    #header {padding-left: 0; padding-right: 0;}
+    #header {flex-direction: column; padding-left: 0; padding-right: 0; min-height: 65px;}
 
     #footer {padding-left: 20px; padding-right: 20px; width: 100%}
 
@@ -13,130 +13,8 @@
 
     #header #header-inner {flex-direction: column}
 
-    #site-navigation {
-        flex-direction: column;
-        align-items: flex-start;
-        border-top: solid 1px #666;
-        width: 100%;
-        background-color: #212121;
-        overflow-x: hidden;
-        padding: 0;
-        margin: 0;
-    }
-
-    /* Hide the navigation menu by default */
-    /* Also hide the */
-    #site-navigation ul {
-        display: none;
-        transition: all 200ms linear 0s;
-        padding: 0;
-        margin: 0;
-    }
-
-    /* Display Dropdown when clicked on Parent Label */
-    #site-navigation .menu a {
-        text-align: left;
-    }
-
-    #site-navigation .toggle {
-        display: flex;
-    }
-
-    /* Styling the toggle label */
-    #site-navigation #main-toggle {
-        display: flex;
-        min-height: 30px;
-        padding: 15px 5px;
-        color: #FFF;
-        transition: all 200ms linear 0s;
-    }
-    
-    #site-navigation .menu .drop-header  {
-        justify-content: flex-start;
-    }
-
-    #site-navigation .menu .drop-header .toggle {
-        font-size: 38px;
-    }
-
-    /* Display Dropdown when clicked on Parent Label */
-    #site-navigation [id^=drop]:checked + ul {
-        display: block;
-        width: 100%;
-        background-color: #212121;
-    }
-
-    /* Change menu item's width to 100% */
-    #site-navigation ul li {
-        display: block;
-        width: 100%;
-        background-color: #111;
-        font-size: 20px;
-        padding: 0;
-        margin: 0;
-    }
-
-    #site-navigation ul ul .toggle,
-    #site-navigation ul ul a {
-        transition: all 200ms linear 0s;
-    }
-    
-    #site-navigation ul li .toggle,
-    #site-navigation ul li:hover .toggle {
-        background-color: transparent !important;
-    }
-
-    #site-navigation ul li:hover,
-    #site-navigation ul ul ul li:hover {
-        border-bottom: solid 5px var(--universal-accent-color);
-    }
-
-    #site-navigation ul li ul li .toggle,
-    #site-navigation ul ul a,
-    #site-navigation ul ul ul a {
-        color: #FFF;
-        font-size: 1em;
-    }
-
-    #site-navigation ul li ul li .toggle,
-    #site-navigation ul ul li {
-        background-color: #212121;
-        padding: 0;
-        margin: 0;
-    }
-
-    /* Hide Dropdowns by Default */
-    #site-navigation ul ul {
-        display: none;
-        float: none;
-        position: static;
-        color: #ffffff;
-        padding: 0;
-        margin: 0;
-    }
-
-    /* Hide menus on hover */
-    #site-navigation ul ul li:hover > ul,
-    #site-navigation ul li:hover > ul {
-        display: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    /* Fisrt Tier Dropdown */
-    #site-navigation ul ul li {
-        display: block;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-
-    #site-navigation ul ul ul li {
-        position: static;
-        background-color: #111;
-        padding: 0;
-        margin: 0;
-    }
+    #site-navigation { display: none; visible: collapse;}
+    #mobile-navigation { display: block;}
 
     #page-heading {border-left: none; border-right: none;}
 
@@ -156,7 +34,6 @@
 }
 
 @media (max-width: 988px) and (min-width: 381px) {
-    #header #header-inner,
     #footer #footer-inner {flex-direction: column}
 
     #author-page-author-box {margin-bottom: 0px}

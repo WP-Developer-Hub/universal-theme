@@ -47,7 +47,7 @@ class UniversalScriptHandler {
         wp_enqueue_style('universal-plugins-style', $theme_uri . '/css/plugins.css');
 
         // Enqueue Universal responsive stylesheet
-//        wp_enqueue_style('universal-responsive-theme-style', $theme_uri . '/css/responsive.css');
+        wp_enqueue_style('universal-responsive-theme-style', $theme_uri . '/css/responsive.css');
 
         // Enqueue Google Fonts stylesheet for Space Mono
         wp_enqueue_style(

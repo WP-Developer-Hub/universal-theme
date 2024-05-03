@@ -145,7 +145,7 @@ function universal_get_title_tagline() {
     // Use a switch statement to adjust output based on visibility setting
     switch ($visibility) {
         case 'none':
-            return $title_start_tag . $end_tag;
+            return '';
             break;
         case 'tagline_only':
             // Display tagline only
@@ -153,7 +153,7 @@ function universal_get_title_tagline() {
             break;
         default:
             // Display title only (default behavior)
-            return$title_start_tag . $title . $end_tag;
+            return $title_start_tag . $title . $end_tag;
             break;
     }
 

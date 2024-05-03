@@ -29,22 +29,31 @@ if (!defined('ABSPATH')) {
 <?php wp_body_open(); ?>
 <body <?php body_class(); ?>>
 <main id="wrapper">
-    <header id="header" class="u-flex u-flex-row" title="Header">
-        <section id="header-inner" class="u-flex u-flex-row u-ai-c u-jc-sb">
-            <div id="site-branding" class="u-flex u-flex-row u-flex-wrap">
-                <?php universal_theme_custom_logo(); ?>
-            </div>
-            <nav id="site-navigation" class="u-flex u-flex-wrap" title="Main Manu">
-                <label for="drop" id="main-toggle" class="toggle burger u-flex"><span class="dashicons dashicons-menu"></span><?php _e('Menu', 'universal-theme'); ?></label>
-                <input type="checkbox" id="drop"  title="Toggle Main Menu"/>
-                <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'primary-menu',
-                    'container' => false,
-                    'walker' => new universal_menu_walker(),
-                ));
-                ?>
-            </nav>
-        </section>
+    <header id="header" class="u-flex u-flex-row u-ai-c u-cf" title="Header">
+        <div id="site-branding" class="u-flex u-flex-row u-flex-wrap u-cf">
+            <?php universal_theme_custom_logo(); ?>
+        </div>
+        <nav id="site-navigation" class="u-flex u-flex-wrap u-cf" title="Main Manu">
+            <?php
+            wp_nav_menu(array(
+                'container' => false,
+                'fallback_cb'=> false,
+                'sort_column' => 'menu_order',
+                'theme_location' => 'primary-menu',
+            ));
+            ?>
+        </nav>
     </header>
+	<details id="mobile-navigation">
+        <summary for="drop" id="main-toggle" class="menu-toggle u-cf"><span class="dashicons dashicons-menu"></span> <?php echo esc_html('Menu', 'universal-theme')?> </summary>
+        <?php
+            wp_nav_menu(array(
+                'container' => false,
+                'fallback_cb'=> false,
+                'sort_column' => 'menu_order',
+                'theme_location' => 'primary-menu',
+                'walker' => new universal_menu_walker_2_0(),
+            ));
+        ?>
+    </details>
 <?php //echo dimox_breadcrumbs(); ?>

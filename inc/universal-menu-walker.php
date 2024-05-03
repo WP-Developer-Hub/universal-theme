@@ -36,7 +36,7 @@ class universal_menu_walker extends Walker_Nav_Menu {
         if ( in_array( 'menu-item-has-children', $item->classes ) ) {
             $menu_item_classes[] = 'menu-item-has-children';
             $output .= '<li id="menu-item-' . esc_attr( $menu_item_id ) . '" class="' . implode( ' ', $menu_item_classes ) . '">';
-            $output .= '<span class="drop-header u-flex u-flex-row u-ai-c u-jc-c"><a href="' . esc_url( $item->url ) . '" title="' . esc_attr( $item->title ) . '">' . esc_html( $item->title ) . '</a><label for="drop-' . $menu_item_id . '" class="toggle ic_arrow_drop " title="toggle ' . esc_attr( $item->title ) . ' menu">+</label></span><input type="checkbox" id="drop-' . $menu_item_id . '" />';
+            $output .= '<span class="drop-header"><a href="' . esc_url( $item->url ) . '" title="' . esc_attr( $item->title ) . '">' . esc_html( $item->title ) . '</a><label for="drop-' . $menu_item_id . '" class="toggle ic_arrow_drop " title="toggle ' . esc_attr( $item->title ) . ' menu">+</label></span><input type="checkbox" id="drop-' . $menu_item_id . '" />';
         } else {
             $output .= '<li id="menu-item-' . esc_attr( $menu_item_id ) . '" class="' . implode( ' ', $menu_item_classes ) . '">';
             // Generate the anchor tag for the menu item

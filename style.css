@@ -87,95 +87,57 @@ img {object-fit: cover}
 
 /* Basic Style for the header & footer */
 #header,
-#footer {background-color: #212121; max-width: 100%; padding: 0 35px}
-
-/* Basic Style for the header-inner & footer*-inner */
-#header #header-inner,
-#footer #footer-inner {width: 100%}
+#footer {background-color: #000; max-width: 100%; padding: 0 35px}
 
 /*--------------------------*
 /* Header Styles 100%
 /*--------------------------*/
 
-#header-inner {min-height: 158px;}
+#header {min-height: 200px;}
 
 /* Style the site branding container */
-#site-branding {max-width: 100%; margin: 0; padding: 0}
+#site-branding {max-width: 100%;}
 
 #site-branding a,
 #site-branding h1,
 #site-branding h2 {margin-right: 10px; color: #ffffff; text-decoration: none;}
-#site-branding img {min-height: 65px; max-height: 128px; margin-right: 15px; max-width: 100%}
-
-/* Style the navigation menu for desktop */
-#site-navigation {max-width: 100%; border-radius:2px; padding: 10px; font-size: 18px}
-
-#site-navigation input[type="checkbox"] {display: none; height: auto}
-
-.burger {font-size: 30px; line-height: 38px;align-items: center}
-
-.burger .dashicons {width: 50px; height: 50px; font-size: 50px; line-height: 50px}
+#site-branding img {min-height: 65px; max-height: 128px; max-width: 100%}
 
 /*--------------------------*
 /* Site Navigation Styles 90%
 /*--------------------------*/
 
-#site-navigation .toggle,
-#site-navigation [id^=drop] { cursor: pointer; width: 30px !important; transition: all 500ms linear 0s}
-
-#site-navigation .toggle,
-#site-navigation #main-toggle,
-#site-navigation [id^=drop] {display: none}
-
-#site-navigation ul {display: flex; list-style: none; padding: 0}
-
-#site-navigation ul li {margin: 0 4px; border-bottom: solid 5px #666; transition: all 500ms linear 0s}
-
-#site-navigation ul li {
-    display: block;
-    position: relative;
-    min-width: 100px;
-}
-
-#site-navigation .menu a {
-    display: block;
-    width: 100%;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    padding: 15px 10px;
-    cursor: pointer;
-}
-
-#site-navigation .menu .drop-header { width: 100%}
-
-#site-navigation .menu .drop-header a {
-    width: auto;
-}
-
-/* Style the submenu */
-#site-navigation ul ul {
-    display: none;
-    position: absolute;
-    top: calc(100% + 5px);
-    left: 0;
-    background-color: #212121;
-    width: 100%; /* Make sub-menu full parent width */
-    z-index: -1; /* Adjust z-index to control the stacking order */
-    transition: all 500ms linear 0s
-}
-
-/* Adjust the position of nested sub-menus */
-#site-navigation ul ul ul {top: 0px; left: 100%}
-
-#site-navigation ul ul li {margin: 0}
-
-#site-navigation ul li:hover > ul {display: block; width: 100%; z-index: 999}
-
-/* Change menu accent color for li:hover .current-menu-item & .current-menu-item .toggl*/
+/* Style the navigation menu for desktop */
+#site-navigation { max-width: 100%; border-radius:2px; padding: 10px; font-size: 18px }
+#site-navigation ul { display: flex; list-style: none; width: max-content; padding: 0 }
+#site-navigation ul li { margin: 0 4px; border-bottom: solid 5px #666; transition: all 500ms linear 0s }
+#site-navigation ul li { display: block; position: relative; min-width: 100px }
+#site-navigation .menu a { display: block; color: #fff; text-align: center; text-decoration: none; vertical-align: middle; padding: 15px 10px; cursor: pointer }
+#site-navigation .menu .drop-header { width: 100% }
+#site-navigation .menu .drop-header a { width: auto }
+#site-navigation ul ul { display: none; position: absolute; top: calc(100% + 5px); left: 0; background-color: #212121; width: max-content; z-index: -1; transition: all 500ms linear 0s }
+#site-navigation ul ul ul { top: 0px; left: 100% }
+#site-navigation ul ul li { margin: 0 }
+#site-navigation ul li:hover > ul { display: block; width: max-content; z-index: 999 }
 #site-navigation li:hover,
-#site-navigation .current-menu-item {border-bottom: solid 5px var(--universal-accent-color)}
+#site-navigation .current-menu-item { border-bottom: solid 5px var(--universal-accent-color) }
+
+/* Style the navigation menu for mobile */
+#mobile-navigation { display: flex; width: 100%; border-radius: 2px; font-size: 18px; background-color: #212121; display: none }
+#mobile-navigation ul > { max-height: 300px; overflow-x: auto }
+#mobile-navigation .menu-toggle { padding: 0; font-size: 30px; line-height: 40px; align-items: center }
+#mobile-navigation #main-toggle { padding: 10px 5px; line-height: 50px; background-color: var(--universal-accent-color); color: var(--universal-accent-color-text-color) }
+#mobile-navigation .dashicons { display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; font-size: 50px; line-height: 50px }
+#mobile-navigation summary { display: flex; background: #000 }
+#mobile-navigation li,
+#mobile-navigation ul { margin: 0; padding: 0; list-style: none }
+#mobile-navigation li { font-size: 24px; border-bottom: 1px solid #555 }
+#mobile-navigation .menu-toggle summary { border-bottom: 1px solid #555 }
+#mobile-navigation li a { display: flex; margin: 0; padding: 25px; color: #fff }
+#mobile-navigation details details { display: flex; background-color: #212121 }
+#mobile-navigation details[open] > summary .toggle-icon {transform: rotate(90deg); }
+#mobile-navigation .current-menu-item { border-bottom: 5px solid var(--universal-accent-color) }
+#mobile-navigation summary a { max-width: 100%; text-decoration: none; padding: 5px; color: var(--universal-accent-color-text-color) }
 
 /*--------------------------*
 /* Post Common Styles 100%

@@ -258,14 +258,13 @@ function universal_theme_redirect() {
 add_action('after_switch_theme', 'universal_theme_redirect');
 
 // Includs Files
-require_once $theme_directory . '/inc/universal-menu-walker.php';
+require_once $theme_directory . '/inc/universal-meta-box.php';
 require_once $theme_directory . '/inc/universal-welcome-page.php';
 require_once $theme_directory . '/inc/universal-widget-areas.php';
 require_once $theme_directory . '/inc/universal-script-handler.php';
 require_once $theme_directory . '/inc/universal-comment-walker.php';
 require_once $theme_directory . '/inc/universal-mods-functions.php';
 require_once $theme_directory . '/inc/universal-menu-walker-2-0.php';
-require_once $theme_directory . '/inc/universal-meta-box.php';
 require_once $theme_directory . '/inc/universal-helpper-functions.php';
 require_once $theme_directory . '/inc/universal-comments-settings.php';
 require_once $theme_directory . '/inc/universal-customize-settings.php';

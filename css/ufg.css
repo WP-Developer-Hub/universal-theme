@@ -18,6 +18,9 @@
 .u-cf:after {clear: both}
 .u-cf {zoom: 1}
 
+.u-float-l {float: left;}
+.u-float-r {float: right;}
+
 .u-img {width: 100%; max-width: 100%; object-fit: contain}
 
 .u-glass-5 {backdrop-filter: blur(5px)}

@@ -9,53 +9,65 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-   return;
+    exit; // Exit if accessed directly.
 }
 
-class universal_menu_walker_2_0 extends Walker_Nav_Menu {
+class Universal_Menu_Walker_2_0 extends Walker_Nav_Menu {
     // Override the start_lvl method to modify sub-menu (ul) output
-    public function start_lvl(&$output, $depth = 0, $args = array()) {
-        $menu_item_id = 'sub-menu-' . $depth;
-        if ( $depth === 0 ) {
-            $output .= '<details class="sub-menu" id="' . esc_attr( $menu_item_id ) . '">';
-        } else {
-            $output .= '<details class="sub-menu sub-menu-' . $depth . '" id="' . esc_attr( $menu_item_id ) . '">';
-        }
+    public function start_lvl( &$output, $depth = 0, $args = null ) {
+        $indent = str_repeat( "\t", $depth );
+
+        // Use a unique ID for each submenu
+        $submenu_id = 'sub-menu-' . $depth;
+
+        // Open the submenu container
+        $output .= "$indent<ul class=\"sub-menu sub-menu-level-$depth\" id=\"$submenu_id\">\n";
     }
 
     // Override the start_el method to modify menu item (li) output
-    public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
-        $menu_item_classes = empty( $item->classes ) ? array() : (array) $item->classes;
-        $menu_item_id = esc_attr( $item->ID );
+    public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+        $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
-        // Add default classes and ID
-        $menu_item_classes[] = 'menu-item';
-        $menu_item_classes[] = 'menu-item-' . $menu_item_id;
+        // Get the menu item ID and classes
+        $menu_item_id = 'menu-item-' . $item->ID;
+        $classes = empty( $item->classes ) ? array() : (array) $item->classes;
 
-        // Check if the item has children and add toggle label if needed
-        if ( in_array( 'menu-item-has-children', $item->classes ) ) {
-            $menu_item_classes[] = 'menu-item-has-children';
-            $output .= '<summary id="menu-item-' . $menu_item_id . '" class="' . implode( ' ', $menu_item_classes ) . '">';
-            $output .= '<a href="' . esc_url( $item->url ) . '">' . esc_html( $item->title ) . '</a>';
+        // Add necessary classes
+        $classes[] = 'menu-item';
+        if ( $args->walker->has_children ) {
+            $classes[] = 'menu-item-has-children';
+        }
+
+        // Determine icon based on depth
+
+        // Build the menu item output
+        $output .= $indent . '<li id="' . esc_attr( $menu_item_id ) . '" class="' . implode( ' ', $classes ) . '">';
+
+        // Add link and toggle if item has children
+        if ( $args->walker->has_children ) {
+            $output .= '<details class="menu-toggle u-cf">';
+            $output .= '<summary>';
+            $output .= '<span class="toggle-icon dashicons dashicons-arrow-right"></span>';
+            $output .= '<span class="menu-item-title"><a href="' . esc_url( $item->url ) . '">' . esc_html( $item->title ) . '</a></span>';
+            $output .= '</summary>';
         } else {
-            $output .= '<summary id="menu-item-' . $menu_item_id . '" class="' . implode( ' ', $menu_item_classes ) . '">';
-            // Generate the anchor tag for the menu item
             $output .= '<a href="' . esc_url( $item->url ) . '">' . esc_html( $item->title ) . '</a>';
+        }
+    }
+
+    // Override the end_el method to modify menu item (li) closing tag
+    public function end_el( &$output, $item, $depth = 0, $args = null ) {
+        $output .= '</li>';
+
+        // Close details tag if item has children
+        if ( $args->walker->has_children ) {
+            $output .= '</details>';
         }
     }
 
     // Override the end_lvl method to modify sub-menu (ul) closing tag
-    public function end_lvl(&$output, $depth = 0, $args = null) {
-        $output .= '</details>';
-    }
-
-    // Override the end_el method to modify menu item (li) closing tag
-    public function end_el(&$output, $item, $depth = 0, $args = null) {
-        if ( in_array( 'menu-item-has-children', $item->classes ) ) {
-            $output .= '</summary>';
-        } else {
-            $output .= '</summary>';
-        }
+    public function end_lvl( &$output, $depth = 0, $args = null ) {
+        $indent = str_repeat( "\t", $depth );
+        $output .= "$indent</ul>\n";
     }
 }
-
