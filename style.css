@@ -522,7 +522,7 @@ iframe,
 
 .widget a {display: flex}
 
-.widget form {background: transparent; border: none; padding: 0; margin: 0}
+.widget form {display: block; background: transparent; border: none; padding: 0; margin: 0}
 .widget .widget_content:not(:empty) {padding: 0; margin: 10px;}
 
 .widget_calendar .calendar_wrap {background: #fff; padding: 20px 20px 10px 20px }
@@ -618,38 +618,13 @@ iframe,
 .widget_recent_entries ul li .children {padding-right: 0; padding-left: 20px}
 
 /* Style the sidebar container */
-.widget form,
-.widget input[type="text"],
-.widget input[type="email"],
-.widget input[type="password"],
-.widget input[type="number"],
-.widget input[type="tel"],
-.widget input[type="url"],
-.widget input[type="date"],
-.widget input[type="datetime-local"],
-.widget input[type="time"],
-.widget input[type="color"],
-.widget input[type="search"],
-.widget input[type="week"],
-.widget input[type="month"],
-.widget select,
-.widget select option,
-.widget textarea,
-.widget label {
-    min-width: 230px;
-}
-
 .widget h1,
 .widget h2:not([class="widget-title"]),
 .widget h3,
 .widget h4,
 .widget h5,
-.widget h6
-.widget button,
-.widget input[type="file"]::file-selector-button,
-.widget input[type="button"],
-.widget input[type="reset"],
-.widget input[type="submit"] {margin: 5px 0;}
+.widget h6,
+.widget button {margin: 5px 0;}
 
 /*--------------------------*
 /* Secondary widget Style 50%
