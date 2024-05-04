@@ -148,7 +148,7 @@ img {object-fit: cover}
 
 .page-heading {background-color: #fff; padding: 20px; border: 1px solid #ccc}
 
-#archive-title {font-size: 3.0em; font-weight: unset; text-align: center}
+#archive-title {font-size: 2.0em; padding: 10px; font-weight: unset; text-align: center}
 
 #universal_search_filter_form #universal_search_filter_inputs * {max-width: 296px; display: unset;}
 
