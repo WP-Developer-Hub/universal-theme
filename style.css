@@ -761,7 +761,11 @@ iframe,
 .post-single table thead tr th,
 .post-single table tbody tr th,
 .post-single table tbody tr td,
-.post-single table tfoot tr th {min-width:100px; max-width:100%; border: 1px solid #999; padding: 5px 10px; transition: all 150ms linear 0.1ms}
+.post-single table tfoot tr th { border: 1px solid #999; }
+.post-single table tbody tr th,
+.post-single table tbody tr td { padding: 5px 10px; }
+.post-single table thead tr th,
+.post-single table tfoot tr td { padding: 5px 10px; white-space: nowrap;}
 .post-single table thead tr,
 .post-single table tfoot tr {background-color: #212121; color: #fff; border: 1px solid var(--universal-accent-color); transition: all 150ms linear 0.1ms}
 .post-single table tbody tr:nth-child(odd):not(.disabled){background-color: #f9f9f9; transition: all 150ms linear 0.1ms}

@@ -1,187 +1,477 @@
-:root {
-  accent-color: var(--universal-accent-color);
+/*
+   Form Elements styles w/ Pure CSS by Rahul
+   CodePen: https://codepen.io/_rahul/pen/jOJRKzm
+*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --co-body-text: #444;
+        --co-body-accent: var(--universal-accent-color);
+        --co-body-accent-contrast: #fff;
+        --co-textfld-bg: #fff;
+        --co-textfld-border: #bbb;
+        --co-textfld-active-border: #ccc;
+        --co-textfld-focus-border: var(--co-body-accent);
+        --co-textfld-valid-border: hsl(140 50% 75%);
+        --co-textfld-valid-active-border: hsl(140 50% 65%);
+        --co-textfld-valid-focus-border: hsl(140 50% 50%);
+        --co-textfld-invalid-border: hsl(20 65% 75%);
+        --co-textfld-invalid-active-border: hsl(20 65% 65%);
+        --co-textfld-invalid-focus-border: hsl(20 65% 50%);
+        --co-btn-text: var(--universal-accent-color-text-color);
+        --co-btn-bg: var(--co-body-accent);
+        --co-btn-active-bg: #000;
+        --co-btn-focus-bg: #212121;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --co-body-text: #ddd;
+        --co-body-accent: var(--universal-accent-color);
+        --co-body-accent-contrast: #fff;
+        --co-textfld-bg: #222;
+        --co-textfld-border: #444;
+        --co-textfld-active-border: #555;
+        --co-textfld-focus-border: var(--co-body-accent);
+        --co-textfld-valid-border: hsl(140 90% 20%);
+        --co-textfld-valid-active-border: hsl(140 90% 30%);
+        --co-textfld-valid-focus-border: hsl(140 90% 45%);
+        --co-textfld-invalid-border: hsl(20 90% 20%);
+        --co-textfld-invalid-active-border: hsl(20 90% 30%);
+        --co-textfld-invalid-focus-border: hsl(20 90% 45%);
+        --co-btn-text: var(--universal-accent-color-text-color);
+        --co-btn-bg: var(--co-body-accent);
+        --co-btn-active-bg: #000;
+        --co-btn-focus-bg: #212121;
+    }
 }
 
-label {display: inline-flex; vertical-align: bottom}
+:root {
+  --leading-inputs: 100%;
+  --padding-inputs: 0.50em;
+  --margin-label: 0.5em;
+  --margin-form-gap: 1.5em;
+  --margin-btn-gap: 1em;
+  --width-input-border: 1px;
+  --width-inputs: 100%;
+  --width-textarea: 100%;
+  --height-textarea: 250px;
+  --radius-inputs: 2px;
+  --opacity-input-disabled: 0.5;
+  --transition-duration-inputs: 250ms;
+  --transition-function-inputs: ease-in-out;
+  --transition-inputs: color var(--transition-duration-inputs),
+    background-color var(--transition-duration-inputs),
+    border-color var(--transition-duration-inputs)
+      var(--transition-function-inputs);
+}
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="tel"],
-input[type="url"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="time"],
-input[type="color"],
-input[type="search"],
-input[type="week"],
-input[type="month"],
-input[type="radio"],
-input[type="checkbox"],
-textarea,
+:read-only:not(label, button, input[type=button], input[type=submit], input[type=reset]) {
+  cursor: default;
+}
+
+:disabled {
+  opacity: var(--opacity-input-disabled);
+  cursor: not-allowed;
+}
+
+/* All elemenets regardless of types */
+input,
 select,
-select option {appearance: none; box-sizing: border-box; width: 100%; max-width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 2px; background: #fff; min-height: 20px; transition: border-color 0.3s ease-in-out}
+option,
+textarea,
+button,
+datalist,
+fieldset,
+legend,
+optgroup,
+output,
+.u-link-button,
+input::file-selector-button {
+  font: inherit;
+  color: inherit;
+  accent-color: var(--co-body-accent);
+  transition: var(--transition-inputs);
+  line-height: var(--leading-inputs);
+}
 
-input[type="text"]:disabled,
-input[type="email"]:disabled,
-input[type="password"]:disabled,
-input[type="number"]:disabled,
-input[type="tel"]:disabled,
-input[type="url"]:disabled,
-input[type="date"]:disabled,
-input[type="datetime"]:disabled,
-input[type="datetime-local"]:disabled,
-input[type="time"]:disabled,
-input[type="color"]:disabled,
-input[type="range"]:disabled::-webkit-slider-container,
-input[type="search"]:disabled,
-input[type="week"]:disabled,
-input[type="month"]:disabled,
-input[type="radio"]:disabled,
-input[type="checkbox"]:disabled,
-input[type="checkbox"]:disabled,
-textarea:disabled,
-select:disabled,
-select option {background: #f9f9f9; border-color: #ddd;}
+/* All elements with types */
+/* Radio & Checkbox */
+/* Buttons */
+/* Select, Buttons and text-fields */
+select,
+textarea,
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+button,
+.u-link-button,
+input[type=reset],
+input[type=submit],
+input[type=button],
+input::file-selector-button {
+  border: var(--width-input-border) solid var(--co-textfld-border);
+  padding: var(--padding-inputs);
+  border-radius: var(--radius-inputs);
+  background-color: var(--co-textfld-bg);
+}
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="time"]:focus,
-input[type="color"]:focus,
-input[type="search"]:focus,
-input[type="week"]:focus,
-input[type="month"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus,
 select:focus,
-textarea:focus {border-color: var(--universal-accent-color); outline: none}
+textarea:focus,
+input[type=date]:focus,
+input[type=datetime-local]:focus,
+input[type=datetime]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus,
+button:focus,
+.u-link-button:focus,
+input[type=reset]:focus,
+input[type=submit]:focus,
+input[type=button]:focus,
+input::file-selector-button:focus {
+  outline: 0;
+}
 
-input[type="file"] {display:inline-flex; align-items:center; box-sizing: border-box;}
+/* All text-fields x select */
+select,
+textarea,
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=range],
+input[type=datetime],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week] {
+  max-width: var(--width-inputs);
+  width: 100%;
+}
 
-/* For invalid inputs */
-input:not([type="checkbox"],[type="radio"],[type="submit"],[type="reset"],[type="button"],[type="range"],[type="color"],[type="search"]):invalid {border-color: red}
+select:hover:not([readonly], [disabled]),
+select:active:not([readonly], [disabled]),
+textarea:hover:not([readonly], [disabled]),
+textarea:active:not([readonly], [disabled]),
+input[type=date]:hover:not([readonly], [disabled]),
+input[type=date]:active:not([readonly], [disabled]),
+input[type=datetime-local]:hover:not([readonly], [disabled]),
+input[type=datetime-local]:active:not([readonly], [disabled]),
+input[type=datetime]:active:not([readonly], [disabled]),
+input[type=datetime]:hover:not([readonly], [disabled]),
+input[type=email]:hover:not([readonly], [disabled]),
+input[type=email]:active:not([readonly], [disabled]),
+input[type=month]:hover:not([readonly], [disabled]),
+input[type=month]:active:not([readonly], [disabled]),
+input[type=number]:hover:not([readonly], [disabled]),
+input[type=number]:active:not([readonly], [disabled]),
+input[type=password]:hover:not([readonly], [disabled]),
+input[type=password]:active:not([readonly], [disabled]),
+input[type=search]:hover:not([readonly], [disabled]),
+input[type=search]:active:not([readonly], [disabled]),
+input[type=tel]:hover:not([readonly], [disabled]),
+input[type=tel]:active:not([readonly], [disabled]),
+input[type=text]:hover:not([readonly], [disabled]),
+input[type=text]:active:not([readonly], [disabled]),
+input[type=time]:hover:not([readonly], [disabled]),
+input[type=time]:active:not([readonly], [disabled]),
+input[type=url]:hover:not([readonly], [disabled]),
+input[type=url]:active:not([readonly], [disabled]),
+input[type=week]:hover:not([readonly], [disabled]),
+input[type=week]:active:not([readonly], [disabled]) {
+  border-color: var(--co-textfld-active-border);
+}
 
-/* For valid inputs */
-input:not([type="checkbox"],[type="radio"],[type="submit"],[type="reset"],[type="button"],[type="range"],[type="color"],[type="search"]):valid {border-color: green}
+select:focus:not([readonly], [disabled]),
+textarea:focus:not([readonly], [disabled]),
+input[type=date]:focus:not([readonly], [disabled]),
+input[type=datetime-local]:focus:not([readonly], [disabled]),
+input[type=datetime]:focus:not([readonly], [disabled]),
+input[type=email]:focus:not([readonly], [disabled]),
+input[type=month]:focus:not([readonly], [disabled]),
+input[type=number]:focus:not([readonly], [disabled]),
+input[type=password]:focus:not([readonly], [disabled]),
+input[type=search]:focus:not([readonly], [disabled]),
+input[type=tel]:focus:not([readonly], [disabled]),
+input[type=text]:focus:not([readonly], [disabled]),
+input[type=time]:focus:not([readonly], [disabled]),
+input[type=url]:focus:not([readonly], [disabled]),
+input[type=week]:focus:not([readonly], [disabled]) {
+  border-color: var(--co-textfld-focus-border);
+}
 
-input[type=checkbox],
-input[type=radio] {min-width: 20px; width: 20px; height: 20px; padding: 0px; display: inline-grid; align-items: center; justify-content: center; box-shadow: none; transition: all 0.3s ease-in-out}
-input[type=checkbox] {-webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px}
-input[type=radio] {border-radius:100%}
-input[type=checkbox]:checked,
-input[type=radio]:checked {background:var(--universal-accent-color)}
-input[type=checkbox]:checked:hover,
-input[type=radio]:checked:hover {background:#111}
-input[type=checkbox]::after,
-input[type=radio]::after {content:""; display: inline-flex; align-items: center; justify-content: center; opacity:0; transition: all 0.3s ease-in-out}
-input[type=checkbox]:checked::after {opacity:1; width:5px; height:15px; border-right:2px solid #fff; border-bottom:2px solid #fff; transform:rotate(45deg); transition: all 0.3s ease-in-out}
-input[type=radio]:checked::after {opacity:1; width:12px;  height:12px; background:var(--universal-accent-color); border:2px solid #fff; border-radius:100%; transition: all 0.3s ease-in-out}
-input[type=radio]:checked:hover::after {background:#111}
+select:required:valid:hover:not([readonly], [disabled]),
+select:required:valid:active:not([readonly], [disabled]),
+textarea:required:valid:hover:not([readonly], [disabled]),
+textarea:required:valid:active:not([readonly], [disabled]),
+input[type=date]:required:valid:hover:not([readonly], [disabled]),
+input[type=date]:required:valid:active:not([readonly], [disabled]),
+input[type=datetime-local]:required:valid:hover:not([readonly], [disabled]),
+input[type=datetime-local]:required:valid:active:not([readonly], [disabled]),
+input[type=datetime]:required:valid:hover:not([readonly], [disabled]),
+input[type=datetime]:required:valid:active:not([readonly], [disabled]),
+input[type=email]:required:valid:hover:not([readonly], [disabled]),
+input[type=email]:required:valid:active:not([readonly], [disabled]),
+input[type=month]:required:valid:hover:not([readonly], [disabled]),
+input[type=month]:required:valid:active:not([readonly], [disabled]),
+input[type=number]:required:valid:hover:not([readonly], [disabled]),
+input[type=number]:required:valid:active:not([readonly], [disabled]),
+input[type=password]:required:valid:hover:not([readonly], [disabled]),
+input[type=password]:required:valid:active:not([readonly], [disabled]),
+input[type=search]:required:valid:hover:not([readonly], [disabled]),
+input[type=search]:required:valid:active:not([readonly], [disabled]),
+input[type=tel]:required:valid:hover:not([readonly], [disabled]),
+input[type=tel]:required:valid:active:not([readonly], [disabled]),
+input[type=text]:required:valid:hover:not([readonly], [disabled]),
+input[type=text]:required:valid:active:not([readonly], [disabled]),
+input[type=time]:required:valid:hover:not([readonly], [disabled]),
+input[type=time]:required:valid:active:not([readonly], [disabled]),
+input[type=url]:required:valid:hover:not([readonly], [disabled]),
+input[type=url]:required:valid:active:not([readonly], [disabled]),
+input[type=week]:required:valid:hover:not([readonly], [disabled]),
+input[type=week]:required:valid:active:not([readonly], [disabled]) {
+  border-color: var(--co-textfld-valid-active-border);
+}
 
-input[type="search"] {position: relative; background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27c1.2-1.4 1.95-3.31 1.95-5.4C16.38 5.36 13.02 2 9.25 2S2 5.36 2 9.13s3.36 7.13 7.13 7.13c2.09 0 3.99-.75 5.4-1.95l.27.28v.79l5 4.99L20.49 18l-4.99-5zm-6.37 0C6.36 14 4 11.64 4 9.13S6.36 4.25 8.87 4.25s4.88 2.36 4.88 4.88-2.36 4.87-4.88 4.87z' fill='%23000'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-size: 1.6EM 1.2EM; background-position: right center; padding: 10px 28px 10px 10px}
+select:required:valid:focus:not([readonly], [disabled]),
+textarea:required:valid:focus:not([readonly], [disabled]),
+input[type=date]:required:valid:focus:not([readonly], [disabled]),
+input[type=datetime-local]:required:valid:focus:not([readonly], [disabled]),
+input[type=datetime]:required:valid:focus:not([readonly], [disabled]),
+input[type=email]:required:valid:focus:not([readonly], [disabled]),
+input[type=month]:required:valid:focus:not([readonly], [disabled]),
+input[type=number]:required:valid:focus:not([readonly], [disabled]),
+input[type=password]:required:valid:focus:not([readonly], [disabled]),
+input[type=search]:required:valid:focus:not([readonly], [disabled]),
+input[type=tel]:required:valid:focus:not([readonly], [disabled]),
+input[type=text]:required:valid:focus:not([readonly], [disabled]),
+input[type=time]:required:valid:focus:not([readonly], [disabled]),
+input[type=url]:required:valid:focus:not([readonly], [disabled]),
+input[type=week]:required:valid:focus:not([readonly], [disabled]) {
+  border-color: var(--co-textfld-valid-focus-border);
+}
+
+select:required:invalid:hover,
+select:required:invalid:active,
+textarea:required:invalid:hover,
+textarea:required:invalid:active,
+input[type=date]:required:invalid:hover,
+input[type=date]:required:invalid:active,
+input[type=datetime-local]:required:invalid:hover,
+input[type=datetime-local]:required:invalid:active,
+input[type=datetime]:required:invalid:hover,
+input[type=datetime]:required:invalid:active,
+input[type=email]:required:invalid:hover,
+input[type=email]:required:invalid:active,
+input[type=month]:required:invalid:hover,
+input[type=month]:required:invalid:active,
+input[type=number]:required:invalid:hover,
+input[type=number]:required:invalid:active,
+input[type=password]:required:invalid:hover,
+input[type=password]:required:invalid:active,
+input[type=search]:required:invalid:hover,
+input[type=search]:required:invalid:active,
+input[type=tel]:required:invalid:hover,
+input[type=tel]:required:invalid:active,
+input[type=text]:required:invalid:hover,
+input[type=text]:required:invalid:active,
+input[type=time]:required:invalid:hover,
+input[type=time]:required:invalid:active,
+input[type=url]:required:invalid:hover,
+input[type=url]:required:invalid:active,
+input[type=week]:required:invalid:hover,
+input[type=week]:required:invalid:active {
+  border-color: var(--co-textfld-invalid-active-border);
+}
+
+select:required:invalid:focus,
+textarea:required:invalid:focus,
+input[type=date]:required:invalid:focus,
+input[type=datetime-local]:required:invalid:focus,
+input[type=datetime]:required:invalid:focus,
+input[type=email]:required:invalid:focus,
+input[type=month]:required:invalid:focus,
+input[type=number]:required:invalid:focus,
+input[type=password]:required:invalid:focus,
+input[type=search]:required:invalid:focus,
+input[type=tel]:required:invalid:focus,
+input[type=text]:required:invalid:focus,
+input[type=time]:required:invalid:focus,
+input[type=url]:required:invalid:focus,
+input[type=week]:required:invalid:focus {
+  border-color: var(--co-textfld-invalid-focus-border);
+}
+
+select::selection,
+textarea::selection,
+input[type=date]::selection,
+input[type=datetime-local]::selection,
+input[type=email]::selection,
+input[type=month]::selection,
+input[type=number]::selection,
+input[type=datetime]::selection,
+input[type=password]::selection,
+input[type=search]::selection,
+input[type=tel]::selection,
+input[type=text]::selection,
+input[type=time]::selection,
+input[type=url]::selection,
+input[type=week]::selection {
+  background-color: var(--co-body-accent);
+  color: var(--co-body-accent-contrast);
+}
+
+select:not([disabled], [readonly]) option:focus,
+select:not([disabled], [readonly]) option:active,
+select:not([disabled], [readonly]) option:hover,
+select:not([disabled], [readonly]) option:checked {
+  background-color: var(--co-body-accent);
+  color: var(--co-body-accent-contrast);
+}
+
+input[type=color] {
+  cursor: pointer;
+  border-style: solid;
+  border-radius: var(--radius-inputs);
+  border-color: var(--co-textfld-border);
+  background-color: var(--co-textfld-bg);
+}
+
+input[type=color]:hover:not([disabled]),
+input[type=color]:active:not([disabled]) {
+  border-color: var(--co-textfld-active-border);
+}
+
+input[type=color]:focus {
+  outline: 0;
+}
+
+input[type=color]:focus:not([disabled]) {
+  border-color: var(--co-textfld-focus-border);
+}
+
+button,
+.u-link-button,
+input[type=reset],
+input[type=submit],
+input[type=button],
+input::file-selector-button {
+  border-color: var(--co-btn-bg);
+  background-color: var(--co-btn-bg);
+  color: var(--co-btn-text);
+  cursor: pointer;
+}
+
+button:hover,
+button:active,
+.u-link-button:hover,
+.u-link-button:active,
+input[type=reset]:hover,
+input[type=reset]:active,
+input[type=submit]:hover,
+input[type=submit]:active,
+input[type=button]:hover,
+input[type=button]:active,
+input::file-selector-button:hover,
+input::file-selector-button:active {
+  background-color: var(--co-btn-active-bg);
+  border-color: var(--co-btn-active-bg);
+}
+
+button:focus,
+.u-link-button:focus,
+.u-link-button-selected,
+input[type=reset]:focus,
+input[type=submit]:focus,
+input[type=button]:focus,
+input::file-selector-button:focus {
+  background-color: var(--co-btn-focus-bg);
+}
+
+/* Labels */
+label {
+  cursor: pointer;
+  display: block;
+}
+
+label + label,
+label + input,
+label + select,
+label + button,
+label + textarea {
+  margin-top: var(--margin-label);
+}
+
+textarea {
+  max-width: var(--width-textarea);
+  height: var(--height-textarea);
+}
+
+textarea:read-only,
+textarea:disabled {
+  resize: none;
+}
+
+input::file-selector-button {
+  margin-right: var(--margin-form-gap);
+}
+
+label:has(input:disabled) {
+  opacity: var(--opacity-input-disabled);
+  cursor: not-allowed;
+}
+
+label:has(input:disabled) :disabled {
+  opacity: 1;
+}
+
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {display: none}
-
-input[type="color"]{padding: 5px; min-width: auto; width: 100% !important; height: 50px}
-input[type="color"]::-webkit-color-swatch-wrapper {padding: 0}
-input[type="color"]::-webkit-color-swatch,
-input[type="color"]::-moz-color-swatch {border: none}
-
-/* Apply styles to single-select dropdowns */
-select:not([multiple]) {position: relative; background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' height='15px' width='20px'%3E%3Ctext x='0' y='12' fill='rgba(0,0,0,1.0)'%3E%E2%96%BE%3C/text%3E%3C/svg%3E") #fff; background-repeat: no-repeat; background-size: 1.5EM 1EM; background-position: right center; box-shadow: none;}
-select,
-select option {color: #000 !important;}
-
-/* Style all button elements on hover, active, and focus */
-input[type="file"]::file-selector-button {margin-right: 10px !important;}
-button,
-input[type="file"]::file-selector-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] { display: inline-flex; flex-direction: column; align-items: center; justify-content: center;appearance: none; padding: 10px 10px; box-sizing: border-box; background: var(--universal-accent-color); color: var(--universal-accent-color-text-color); font-size: 1em; border: none; border-radius: 2px; cursor: pointer; text-decoration: none; max-height: 48px; border: 1px solid #ccc; transition: background 0.3s ease-in-out}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {appearance: button; box-sizing: border-box; display:block; padding: 5px 10px; background: var(--universal-accent-color); color: var(--universal-accent-color-text-color); font-size: 1em; border: none; border-radius: 2px; cursor: pointer; text-decoration: none; opacity: 1; transition: background 0.3s ease-in-out}
-
-button:hover,
-input[type="file"]::file-selector-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover,
-button:active,
-input[type="file"]::file-selector-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active,
-button:focus,
-input[type="file"]::file-selector-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus {background: #212121; color: #fff}
-
-button:disabled,
-input[type="file"]:disabled::file-selector-button,
-input[type="button"]:disabled,
-input[type="reset"]:disabled,
-input[type="submit"]:disabled {background: #919191}
-
-::-moz-range-track {appearance: none; display: flex; align-items: center; justify-content: center; width: 100%; max-width: 100%; border: 1px solid #ccc; border-radius: 100px; height: 5px; background: #fff; transition: border-color 0.3s ease-in-out}
-
-::-webkit-slider-container {appearance: none; display: flex; align-items: center; justify-content: center; width: 100%; max-width: 100%; border: 1px solid #ccc; border-radius: 100px; height: 5px; background: #fff; transition: border-color 0.3s ease-in-out}
-
-::-moz-range-progress {background: var(--universal-accent-color-alt); padding: 0 !important; border-radius: 1000px !important; height: 5px}
-
-::-moz-range-thumb,
-::-webkit-slider-thumb {background: var(--universal-accent-color); border: none; max-width: 20px; width: 15px; height: 15px; border-radius: 100px; box-shadow: none; transition: all 0.3s ease-in-out}
-
-::-moz-range-thumb:hover,
-::-moz-range-thumb:active,
-::-moz-range-thumb:focus,
-::-webkit-slider-thumb:hover,
-::-webkit-inner-spin-button:hover,
-::-webkit-slider-thumb:active,
-::-webkit-inner-spin-button:active,
-::-webkit-slider-thumb:focus,
-::-webkit-inner-spin-button:focus {background: #212121; color: #fff}
-
-input:disabled::-moz-range-thumb,
-input:disabled::-webkit-slider-thumb,
-input[type="number"]:disabled::-webkit-inner-spin-button:hover {background: #919191}
-
-input[type="renge"]::-moz-range-thumb,
-input[type="renge"]::-webkit-slider-thumb {
-    padding: 0;
-    border-radius: 100%;
-    z-index: 999;
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
 }
 
-progress{appearance: none; box-sizing: border-box; width: 100%; max-width: 100%; border: 1px solid #ccc; border-radius: 2px; background: #fff; min-height: 20px; transition: border-color 0.3s ease-in-out}
-progress::-webkit-progress-bar{background:transparent}
-progress[value]::-webkit-progress-value{background: var(--universal-accent-color); animation: pingPong 4s linear infinite; width: 50%}
-progress:not([value])::-webkit-progress-value{background: var(--universal-accent-color); animation: pingPong 4s linear infinite; width: 50%}
-progress[value]::-moz-progress-bar{background: var(--universal-accent-color)}
-progress:not([value])::-moz-progress-bar{background: var(--universal-accent-color); animation: pingPong 4s linear infinite; width: 50%}
+input[type="search"]{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27c1.2-1.4 1.95-3.31 1.95-5.4C16.38 5.36 13.02 2 9.25 2S2 5.36 2 9.13s3.36 7.13 7.13 7.13c2.09 0 3.99-.75 5.4-1.95l.27.28v.79l5 4.99L20.49 18l-4.99-5zm-6.37 0C6.36 14 4 11.64 4 9.13S6.36 4.25 8.87 4.25s4.88 2.36 4.88 4.88-2.36 4.87-4.88 4.87z' fill='%23000'/%3E%3C/svg%3E"); 
+  background-repeat: no-repeat;
+  background-size: 1.6em 1.2em;
+  background-position: right center;
+  padding-right: 1.2em;
+}
 
-meter {appearance: none; box-sizing: border-box; width: 100%; max-width: 100%; border: 1px solid #ccc; border-radius: 2px; background: #fff; min-height: 20px; transition: border-color 0.3s ease-in-out}
-meter:-moz-meter-bar  {appearance:none; box-sizing:border-box; width: 100%; max-width: 100%; border: 1px solid #ccc; border-radius: 2px; background: #fff; min-height: 20px; transition: border-color 0.3s ease-in-out}
-meter::-webkit-meter-bar{background:transparent}
-meter[value]::-webkit-meter-optimum-value{background: var(--universal-accent-color)}
-meter[value]:-moz-meter-optimum::-moz-meter-bar{background: var(--universal-accent-color)}
-@keyframes pingPong{0%{transform:translateX(0%)} 50%{transform: translateX(100%)} 100%{transform:translateX(0%)}}
+select:not([multiple]) {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' height='15px' width='20px'%3E%3Ctext x='0' y='12' fill='rgba(0,0,0,1.0)'%3E%E2%96%BE%3C/text%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 1.5EM 1EM;
+  background-position: right center;
+  padding-right: 0em;
+}
 
-kbd{background: var(--universal-accent-color); border-radius: 3px; color: var(--universal-accent-color-text-color); display: inline-block; font-size: 0.85em !important; font-weight: 700; line-height: 1; padding: 4px 8px; white-space: nowrap}
-
-form {display: flex; flex-direction: column; gap: 5px; padding: 20px}
-form label {display: flex; gap: 5px; padding: 2px 0px; margin: 2px 0px}
-
-form fieldset {display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--u-post-item-min-width), 1fr)); gap: 10px;  width: 100%; max-width: 100%; padding: 10px; border: 1px solid #ccc;}
+fieldset {width: 100%; max-width: var(--width-inputs;)}
+form {width: 100%; display: grid; gap: 20px; max-width: var(--width-inputs;); padding: 20px;}
+#searchbar {gap: 0px; padding: 10px;}
+label { display: flex; flex-direction: row;}

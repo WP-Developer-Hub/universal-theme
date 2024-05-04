@@ -280,13 +280,6 @@
 
 .u-fit{object-fit: cover !important; object-view-box: none !important; object-position: top center !important;}
 
-.u-link-button {appearance: none; box-sizing: border-box; padding: 10px 10px; background-color: var(--universal-accent-color); color: #fff; font-size: 1em; border: none; border-radius: 2px; cursor: pointer; text-decoration: none; max-height: 48px; transition: all 150ms linear 0.1ms}
-
-.u-link-button:focus,
-.u-link-button:hover,
-.u-link-button:active,
-.u-link-button.u-link-button-selected {background-color: #000; color: #fff; text-decoration: none; transition: all 150ms linear 0.1ms}
-
 .u-fake-form {padding: 20px !important; transition: all 150ms linear 0.1ms}
 .u-pm-none {padding: 0px !important; margin: 0px !important; transition: all 150ms linear 0.1ms}
 
