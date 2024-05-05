@@ -81,8 +81,7 @@
 /* Grid Columns and Rows (1-10) */
 
 /* Grid Columns */
-.u-grid-col-1 {grid-template-columns:100%; transition: all 150ms linear 0.1ms}
-.u-grid-col-p {grid-template-columns: 300px 1fr; transition: all 150ms linear 0.1ms}
+.u-grid-col-1 {grid-template-columns: repeat(1, 1fr); transition: all 150ms linear 0.1ms}
 .u-grid-col-2 {grid-template-columns: repeat(2, 1fr); transition: all 150ms linear 0.1ms}
 .u-grid-col-3 {grid-template-columns: repeat(3, 1fr); transition: all 150ms linear 0.1ms}
 .u-grid-col-4 {grid-template-columns: repeat(4, 1fr); transition: all 150ms linear 0.1ms}
@@ -93,12 +92,14 @@
 .u-grid-col-9 {grid-template-columns: repeat(9, 1fr); transition: all 150ms linear 0.1ms}
 .u-grid-col-10 {grid-template-columns: repeat(10, 1fr); transition: all 150ms linear 0.1ms}
 
+.u-grid-col-p {grid-template-columns: 300px 1fr; transition: all 150ms linear 0.1ms}
+.u-grid-col-s {grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); transition: all 150ms linear 0.1ms}
 .u-grid-col-auto {grid-template-columns: repeat(auto-fill, minmax(var(--u-post-item-min-width), 1fr)); transition: all 150ms linear 0.1ms}
 
 .u-grid-wsb {grid-template-columns: auto var(--u-post-sb-width); transition: all 150ms linear 0.1ms}
 
 /* Grid Rows */
-.u-grid-row-1 {grid-template-rows: 100%; transition: all 150ms linear 0.1ms}
+.u-grid-row-1 {grid-template-rows: repeat(1, 1fr); transition: all 150ms linear 0.1ms}
 .u-grid-row-2 {grid-template-rows: repeat(2, 1fr); transition: all 150ms linear 0.1ms}
 .u-grid-row-3 {grid-template-rows: repeat(3, 1fr); transition: all 150ms linear 0.1ms}
 .u-grid-row-4 {grid-template-rows: repeat(4, 1fr); transition: all 150ms linear 0.1ms}

@@ -53,12 +53,12 @@ if ($post_formats && is_array($post_formats[0])) {
     }
     ?>
 
-    <div class="u-margin-top-10 u-flex u-flex-row u-flex-nowrap u-ai-c u-jc-sb u-flex-gap-10 u-tt-all-uppercase">
-        <a href="<?php echo esc_url($all_link_url); ?>" class="u-link-button u-flex u-flex-row u-flex-nowrap u-ai-c u-jc-sb u-flex-gap-10 u-block-100 <?php echo universal_search_filter_item_class('all'); ?>">
+    <div class="u-margin-top-10 u-grid u-grid-col-s u-flex-gap-10 u-tt-all-uppercase">
+        <a href="<?php echo esc_url($all_link_url); ?>" class="u-link-button u-flex u-flex-row u-flex-nowrap u-ai-c u-jc-sb<?php echo universal_search_filter_item_class('all'); ?>">
             <?php
             // Display "All" link with total post count
             '<span>' . _e('All', 'universal-theme') . '</span>';
-            echo '<span> (' . $total_post_count . ')' . '</span>';
+            echo '&nbsp;<span>(' . $total_post_count . ')' . '</span>';
             ?>
         </a>
 
@@ -70,10 +70,10 @@ if ($post_formats && is_array($post_formats[0])) {
 
             // Display the post format link with count
             ?>
-            <a href="<?php echo esc_url($post_format_url); ?>" class="u-link-button u-flex u-flex-row u-flex-nowrap u-ai-c u-jc-sb u-flex-gap-10 u-block-100 <?php echo universal_search_filter_item_class($post_format_slug); ?>">
+            <a href="<?php echo esc_url($post_format_url); ?>" class="u-link-button u-flex u-flex-row u-flex-nowrap u-ai-c u-jc-sb<?php echo universal_search_filter_item_class($post_format_slug); ?>">
                 <?php
                 echo '<span>' . ucfirst($post_format) . '</span>';
-                echo '<span> (' . $format_counts[$post_format_slug] . ')' . '</span>';
+                echo '&nbsp;<span>(' . $format_counts[$post_format_slug] . ')' . '</span>';
                 ?>
             </a>
             <?php

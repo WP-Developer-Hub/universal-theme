@@ -41,20 +41,19 @@ class UniversalScriptHandler {
 
         // Enqueue Universal theme stylesheet
         wp_enqueue_style('universal-theme-style', $theme_uri . '/style.css');
-//        wp_enqueue_style('universal-theme-style', $theme_uri . '/style_new_temp.css');
-
-        // Enqueue Universal plugin stylesheet
-        wp_enqueue_style('universal-plugins-style', $theme_uri . '/css/plugins.css');
 
         // Enqueue Universal responsive stylesheet
         wp_enqueue_style('universal-responsive-theme-style', $theme_uri . '/css/responsive.css');
 
+        // Enqueue Universal plugin stylesheet
+        wp_enqueue_style('universal-plugins-style', $theme_uri . '/css/plugins.css');
+
         // Enqueue Google Fonts stylesheet for Space Mono
         wp_enqueue_style(
-            'space-mono-font', // Handle
-            'https://fonts.googleapis.com/css2?family=Space+Mono&display=swap', // URL
-            array(), // Dependencies
-            null // Version
+            'space-mono-font',
+            'https://fonts.googleapis.com/css2?family=Space+Mono&display=swap',
+            array(),
+            null
         );
     }
 

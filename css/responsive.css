@@ -14,11 +14,12 @@
     #header #header-inner {flex-direction: column}
 
     #site-navigation { display: none; visible: collapse;}
+
     #mobile-navigation { display: block;}
 
     #page-heading {border-left: none; border-right: none;}
 
-/*    #container, #post-list-content {grid-gap: 5px; margin: 5px 0}*/
+    #container, #post-list-content {grid-gap: 5px; margin: 5px 0}
 
     .post-container {padding: 20px}
 
@@ -39,8 +40,6 @@
     #author-page-author-box {margin-bottom: 0px}
 
     #container, #post-list-content, .post-container, .post-content-wrapper, #post-container, #related-posts {grid-template-columns: 100%}
-
-    #post-list-content .post-container .post-content-wrapper {grid-template-columns: 100px 1fr;}
 
     #post-list-content #posts .post-item-thumbnail, #post-list-content #posts .post-item-thumbnail .post-thumbnail-missing {max-width: 100px; height: 100px}
 
