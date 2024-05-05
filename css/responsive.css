@@ -3,134 +3,82 @@
 --------------------------------------------- */
 
 @media (max-width: 1050px) and (min-width: 380px) {
-    #wrapper {width: 100%; margin:0}
+    #wrapper { width: 100%; margin: 0; padding: 0 }
 
-    #header {flex-direction: column; padding-left: 0; padding-right: 0; min-height: 65px;}
+    #header { flex-direction: column; padding-left: 0; padding-right: 0; min-height: 65px }
 
-    #footer {padding-left: 20px; padding-right: 20px; width: 100%}
+    #site-branding { margin: 0 10px }
 
-    #site-branding {margin: 0 10px;}
+    #header #header-inner { flex-direction: column }
 
-    #header #header-inner {flex-direction: column}
+    #site-navigation { display: none; visible: collapse }
 
-    #site-navigation { display: none; visible: collapse;}
+    #mobile-navigation { display: block }
 
-    #mobile-navigation { display: block;}
+    #page-heading { border-left: none; border-right: none }
 
-    #page-heading {border-left: none; border-right: none;}
+    .post-container { padding: 20px }
 
-    #container, #post-list-content {grid-gap: 5px; margin: 5px 0}
-
-    .post-container {padding: 20px}
-
-    .page-heading {border-left: none; border-right: none;}
-
-    .pagination {margin-left: 8px; margin-right: 8px}
+    .pagination { margin-left: 8px; margin-right: 8px }
 }
 
 @media (max-width: 1200px) and (min-width: 381px) {
-    #post-list-content .post-container .post-content-wrapper {grid-template-columns: 200px 1fr;}
-    #post-list-content #posts .post-item-thumbnail, #post-list-content #posts .post-item-thumbnail .post-thumbnail-missing {max-width: 200px; height: 200px; font-size: 100px;}
-    #post-list-content #posts .post-item-thumbnail .posticons{ display: none;}
+    .post-content-wrapper { grid-template-columns: 100% }
+    #post-list-content #posts .post-item-thumbnail .posticons { display: none }
 }
 
 @media (max-width: 988px) and (min-width: 381px) {
-    #footer #footer-inner {flex-direction: column}
+    #footer #footer-inner { flex-direction: column }
 
-    #author-page-author-box {margin-bottom: 0px}
+    #author-page-author-box { margin-bottom: 0px }
 
-    #container, #post-list-content, .post-container, .post-content-wrapper, #post-container, #related-posts {grid-template-columns: 100%}
+    #container,
+    #post-container,
+    #post-list-content,
+    #related-posts { grid-template-columns: 100% }
 
-    #post-list-content #posts .post-item-thumbnail, #post-list-content #posts .post-item-thumbnail .post-thumbnail-missing {max-width: 100px; height: 100px}
+    #post-container { gap: 10px;}
 
-    .widget-area {
-        padding: 0px;
-        gap: 0px;
-    }
+    .widget-area { padding: 0px }
 
-    .widget-area .widget {
-        margin-bottom: 5px;
-        gap: 0px;
-    }
+    .author-box { flex-direction: column }
 
-    .author-box {
-        flex-direction: column;
-    }
-
-    .author-box .author-avatar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    .author-box .author-avatar { display: flex; align-items: center; justify-content: center }
 
     #posts,
-    #related-posts {
-        margin: 0px;
-    }
+    #related-posts { margin: 0px }
+
+    #secondary,
+    .post-single,
+    .page-heading,
+    #posts .post-item,
+    .single-post-content { border-left: none; border-right: none; margin: 0 }
 
     .post-item,
-    .author-box .author-info {
-        margin: 0px;
-    }
+    .author-box .author-info { margin: 0px }
 
-    #related-posts .post-item {
-        width: 100%;
-    }
+    #related-posts .post-item { width: 100% }
 
-    #related-posts .post-item-thumbnail .post-thumbnail-missing {
-        width: 100%;
-    }
+    #related-posts .post-item-thumbnail .post-thumbnail-missing { width: 100% }
 
-    .post-container {padding: 25px}
+    .post-container { padding: 25px }
 
-    #footer #footer-inner {
-        padding: 0;
-    }
+    #footer #footer-inner .footer-widget { width: 100%; gap: 0 }
 
-    #footer #footer-inner .footer-widget {
-        border: none !important;
-        width: 100%;
-        margin: 0;
-        gap: 0;
-    }
-
-    #error-additional-message {font-size: 60px}
-}
-
-@media all and (max-width : 900px) {
-    #post-list-content .post-container .post-content-wrapper { grid-template-columns: 100px 1fr;}
+    #error-additional-message { font-size: 60px }
 }
 
 @media all and (max-width : 596px) {
-    #error-message {font-size: 200px}
+    #error-message { font-size: 200px }
 
-    #error-additional-message {font-size: 50px}
+    #error-additional-message { font-size: 50px }
     
     #site-branding a,
     #site-branding h1,
-    #site-branding h2 {font-size: 45px}
+    #site-branding h2 { font-size: 45px }
 
-    #post-list-content, .post-content-wrapper  {
-        grid-template-columns: 100%;
-    }
-
-    #page-heading,
-    .post-item {border-left: none; border-right: none;}
-    .post-item {border-top: none}
-
-    #single-post-meta {
-        flex-direction: column;
-        flex: 100%;
-        gap: 20px;
-    }
-
-    #single-post-meta .meta-separator::after {
-        content: "" !important;
-        height: 1px !important;
-        margin: 5px 0 !important;
-        width: 100% !important;
-        background: #EEE !important;
-        display: none !important;
-    }
+    #single-post-meta { display: grid; gap: 10px }
+    #single-post-meta .meta-row { display: block; width: 100%}
+    #single-post-meta .meta-separator::after { content: "" !important }
 }
 

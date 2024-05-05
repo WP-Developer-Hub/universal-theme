@@ -570,7 +570,7 @@ iframe,
 /*--------------------------*
 /* Common widget Style 50%
 /*--------------------------*/
-.widget {margin-bottom: 10px}
+.widget {display: block; margin-bottom: 10px}
 
 .section-title,
 .widget .widget-title {gap:5px; display: flex; font-size: 20px; margin-bottom: 10px; flex-direction: row; align-items: center; justify-content: flex-start}
@@ -582,7 +582,7 @@ iframe,
 
 .widget a {display: flex}
 
-.widget form {display: block; background: transparent; border: none; padding: 0 !important; margin: 0 !important;}
+.widget form {background: transparent; border: none; padding: 0 !important; margin: 0 !important;}
 .widget .widget_content:not(:empty) {padding: 0; margin: 10px;}
 
 .widget_calendar .calendar_wrap {background: #fff; padding: 20px 20px 10px 20px }

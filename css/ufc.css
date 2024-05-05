@@ -53,7 +53,7 @@
 :root {
   --leading-inputs: 100%;
   --padding-inputs: 0.50em;
-  --margin-label: 10px;
+  --margin-label: 20px;
   --margin-form-gap: 1.5em;
   --width-input-border: 1px;
   --width-inputs: 100%;
@@ -414,10 +414,21 @@ input::file-selector-button:focus {
   background-color: var(--co-btn-focus-bg);
 }
 
+button,
+.u-link-button,
+.u-link-button-selected,
+input[type=reset],
+input[type=submit],
+input[type=button] {
+    margin-top: var(--margin-label);
+}
+
+
 /* Labels */
 label {
   cursor: pointer;
   display: block;
+  margin-top: var(--margin-label);
 }
 
 label + label,
@@ -476,6 +487,6 @@ select:not([multiple]) {
 }
 
 fieldset {width: 100%; max-width: var(--width-inputs);}
-form {width: 100%; display: grid; gap: var(--margin-label); max-width: var(--width-inputs);}
+form {width: 100%; display: block; max-width: var(--width-inputs);}
 #searchbar {gap: 0px; padding: 10px;}
 label { display: flex; align-items: center; gap: 10px; }
