@@ -15,7 +15,7 @@ Text Domain: universal-theme
 
 :root {
   /* U grid Sidebar Width Ajust to fix theme */
-  --u-post-sb-width: 350px;
+  --u-post-sb-width: 375px;
   --u-post-item-min-width: 275px;
   --u-post-item-min-height: 575px;
 }

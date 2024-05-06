@@ -2,7 +2,7 @@
 /* Media Queries
 --------------------------------------------- */
 
-@media (max-width: 1050px) and (min-width: 380px) {
+@media (max-width: 1085px) and (min-width: 380px) {
     #wrapper { width: 100%; margin: 0; padding: 0 }
 
     #header { flex-direction: column; padding-left: 0; padding-right: 0; min-height: 65px }
@@ -15,7 +15,9 @@
 
     #mobile-navigation { display: block }
 
-    #page-heading { border-left: none; border-right: none }
+    .page-heading { border-left: none; border-right: none }
+
+    #secondary { border-right: none }
 
     .post-container { padding: 20px }
 
@@ -50,7 +52,6 @@
 
     #secondary,
     .post-single,
-    .page-heading,
     #posts .post-item,
     .single-post-content { border-left: none; border-right: none; margin: 0 }
 
