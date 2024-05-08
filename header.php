@@ -26,8 +26,8 @@ if (!defined('ABSPATH')) {
     <meta name='theme-color' content='#212121' />
     <?php wp_head(); ?>
 </head>
-<?php wp_body_open(); ?>
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <main id="wrapper">
     <header id="header" class="u-flex u-flex-row u-ai-c u-cf" title="Header">
         <div id="site-branding" class="u-flex u-flex-row u-flex-wrap u-cf">
